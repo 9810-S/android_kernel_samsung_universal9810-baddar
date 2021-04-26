@@ -103,6 +103,7 @@ extern int lb_need_active_balance(enum cpu_idle_type idle,
 extern bool energy_initialized;
 extern void set_energy_table_status(bool status);
 extern bool get_energy_table_status(void);
+extern bool is_slowest_cpu(int cpu);
 #else
 static inline struct sched_group *lb_fit_idlest_group(struct sched_domain *sd,
                struct task_struct *p) { return NULL; }
@@ -173,6 +174,10 @@ static inline int lb_need_active_balance(enum cpu_idle_type idle,
 }
 static inline void set_energy_table_status(bool status) { }
 static inline bool get_energy_table_status(void)
+{
+	return false;
+}
+static inline bool is_slowest_cpu(int cpu)
 {
 	return false;
 }
