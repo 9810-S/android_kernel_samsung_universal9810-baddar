@@ -4982,9 +4982,9 @@
 			device_type = "freqvar-tune";
 			shared-cpus = "0-3";
 
-			boost_table = < 160 949000 123 1456000 100 >;
-			up_rate_limit_table = < 10000 >;
-			down_rate_limit_table = < 10000 >;
+			boost_table = < 0 >;
+			up_rate_limit_table = < 500 >;
+			down_rate_limit_table = < 2500 >;
 			st_table = < 5 >;
 		};
 
@@ -4992,9 +4992,9 @@
 			device_type = "freqvar-tune";
 			shared-cpus = "4-7";
 
-			boost_table = < 160 962000 123 1261000 100 >;
-			up_rate_limit_table = < 10000 >;
-			down_rate_limit_table = < 10000 >;
+			boost_table = < 0 >;
+			up_rate_limit_table = < 500 >;
+			down_rate_limit_table = < 2500 >;
 			st_table = < 5 >;
 		};
 	};
